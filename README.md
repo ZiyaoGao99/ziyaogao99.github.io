@@ -1,6 +1,6 @@
 # Ziyao Gao — Academic Homepage
 
-Personal academic website: https://ziyaogao99.github.io/homepage/
+Personal academic website: https://ziyaogao99.github.io/
 
 This is a static HTML/CSS/JavaScript website, hosted by GitHub Pages.
 
@@ -12,6 +12,7 @@ This is a static HTML/CSS/JavaScript website, hosted by GitHub Pages.
 - Images are stored beside `index.html`, with descriptive filenames.
 - `portrait.js` preserves the approved crop: zoom 1.08, horizontal 0%, vertical 100%.
 - Awards and Misc are retained in the HTML with the `hidden` attribute.
+- `homepage/index.html` redirects the previous `/homepage/` URL to the current home page.
 
 GitHub Pages publishes `main` from `/ (root)`. Changes committed to `main` are published automatically. No build step or paid service is required.
 
