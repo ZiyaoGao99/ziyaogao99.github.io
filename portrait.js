@@ -1,6 +1,13 @@
 (() => {
  'use strict';
  const root = document.getElementById('ziyao-home');
+ const header = root.querySelector('.zg-header');
+ function updateHeader() {
+  header.classList.toggle('is-scrolled', window.scrollY > 4);
+ }
+ window.addEventListener('scroll', updateHeader, { passive:true });
+ updateHeader();
+
  const frame = root.querySelector('.zg-portrait');
  const photo = frame.querySelector('img');
  const crop = { zoom:1.08, x:0, y:100 };
