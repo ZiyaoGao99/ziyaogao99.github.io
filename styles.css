@@ -2,6 +2,14 @@ body{margin:0;background:#0d0e0e}#ziyao-home{max-width:1024px;margin:0 auto}@med
 #ziyao-home { --zg-bg:#0d0e0e; --zg-fg:#e9e6e0; --zg-muted:#aeada7; --zg-accent:#B4E170; --zg-img-radius:4px; --zg-line:#30312f; --zg-panel:#171918; --zg-bio-size:15px; --zg-portrait-width:274px; --zg-gutter:48px; background:var(--zg-bg); color:var(--zg-fg); padding:0 var(--zg-gutter); font:15px/1.7 Arial,Helvetica,sans-serif; text-align:left; box-sizing:border-box; color-scheme:dark; }
 #ziyao-home * { box-sizing:border-box; }
 #ziyao-home::selection, #ziyao-home ::selection { background-color:#A94DA6; color:#000; }
+/* Match WebKit's native selection band to the line box, including the first line.
+   Inline padding leaves the text baselines and wrapping intact. Arial's text box is about 1.14em. */
+@supports (font: -apple-system-body) {
+ #ziyao-home .zg-line-text {
+  padding-block:max(0px, calc((1lh - 1.14em) / 2));
+  padding-block:max(0px, calc((round(down, 1lh, 1px) - round(nearest, 1.14em, 1px)) / 2));
+ }
+}
 #ziyao-home :is(h1,h2,h3,p,figure) { margin:0; }
 #ziyao-home a { color:var(--zg-accent); text-decoration:none; }
 #ziyao-home a:hover { text-decoration:underline; text-underline-offset:5px; }
